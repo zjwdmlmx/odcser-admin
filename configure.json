@@ -11,5 +11,13 @@
   "redis":
   {
     "path": "/var/run/redis.odcser.sock"
-  }
+  },
+
+  "server":
+  {
+    "port": 9900,
+    "address": "localhost"
+  },
+
+  "version": "1.0.0"
 }
