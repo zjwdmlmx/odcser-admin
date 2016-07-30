@@ -1,0 +1,15 @@
+{
+  "database":
+  {
+    "socketPath": "/var/run/mysql/mysql.sock",
+    "user": "odcser",
+    "password": "odcser",
+    "database": "odcser",
+    "charset": "utf8_general_ci"
+  },
+
+  "redis":
+  {
+    "path": "/var/run/redis.odcser.sock"
+  }
+}
