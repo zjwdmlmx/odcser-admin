@@ -1,0 +1,12 @@
+extends ./base.pug
+
+block header
+    title Select Application Type to Upload
+
+block title-content
+    h1 Select Application Type to Upload
+
+block content
+    div(style={"padding": "40px 15px"})
+        a(class="btn btn-success select-apk-type-button" type="button" href="/admin/update/app?t=c") Submit Children Side Apk
+        a(class="btn btn-success select-apk-type-button" type="button" href="/admin/update/app?t=o") Submit Elder Side Apk

@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.6/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/static/css/theme.css")
+        block header
+            title base
+    body
+        block bodyer
+            nav(class="navbar navbar-default nav-z")
+                div(class="container-fluid")
+                    div(class="col-md-10")
+                        div(class="navbar-header")
+                            a(href="/" type="button" class="btn btn-default btn-default-nav-z") Home
+                    div(class="col-md-2")
+                        if isLogin
+                            a(type="button" class="btn btn-default btn-default-nav-z" href="/admin/logout") Logout
+                        else
+                            a(type="button" class="btn btn-default btn-default-nav-z" href="/admin/login") Login
+            div(class="container-fluid")
+                div(class="row title-area-z")
+                    div(class="col-md-12")
+                        block title-content
+
+                div(class="row")
+                    div(class="col-md-2 list-group list-group-z")
+                        include ./left_pad.pug
+
+                    div(class="col-md-1")
+                    div(class="col-md-6")
+                        block content
+
+        script(src="http://cdn.staticfile.org/jquery/2.2.1/jquery.min.js")
+        script(src="http://cdn.staticfile.org/twitter-bootstrap/3.3.6/js/bootstrap.min.js")

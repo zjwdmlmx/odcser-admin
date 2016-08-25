@@ -1,0 +1,32 @@
+extends ./base.pug
+
+block header
+    title Login
+
+
+block bodyer
+    - var action = "/admin/login"
+
+    if url
+        - action = "/admin/login?u=" + url
+
+
+    div(class="container")
+        div(class="row" style={"min-height": "150px"})
+        div(class="row")
+            div(class="col-md-3 col-md-offset-1 login-panel")
+                div(class="login-panel-title")
+                    label Login
+                form(class="form-horizontal" style={"padding" :"50px 40px"} method="POST" action=action)
+                    div(class="form-group form-group-z")
+                        div(class="input-group col-sm-12")
+                            span( class="input-group-addon") @
+                            input#username(class="form-control" type="text" placeholder="Username" name="username")
+
+                    div(class="form-group form-group-z" style={"margin-top": "50px", "margin-bottom": "35px"})
+                        div(class="input-group col-sm-12")
+                            span( class="input-group-addon") @
+                            input#password(class="form-control" type="password" placeholder="password" name="password")
+                    div(class="form-group form-group-z")
+                        input(type="submit" value="Login" class="form-control btn btn-success")
+

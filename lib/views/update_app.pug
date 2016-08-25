@@ -1,0 +1,29 @@
+extends ./base.pug
+
+block header
+    title update app
+
+block title-content
+    h1 Update Android Application Package File
+
+
+block content
+    form(class="form-horizontal" style={"margin-top": "25px"} method="POST" enctype="multipart/form-data" action='/admin/update/app?t=' + appType)
+        div(class="form-group form-group-z")
+            div(class="input-group")
+                span( class="input-group-addon input-group-addon-z") Apk Version
+                input#child-version(class="form-control" type="text" placeholder="Version" name="version")
+
+        div(class="form-group form-group-z")
+            div(class="input-group")
+                span(class="input-group-addon input-group-addon-z") Apk File
+                input(class="form-control" type="text" placeholder="Click to Choose File")
+                input#child-apk(type="file" name="apk_file" style={
+                    "opacity":   "0",
+                    "position":  "absolute",
+                    "left":      "100px",
+                    "min-width": "200px",
+                    "z-index":   "1000"
+                })
+        div(class="form-group form-group-z")
+            input(type="submit" class="btn btn-success" value="Submit")
